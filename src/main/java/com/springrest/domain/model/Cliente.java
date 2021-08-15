@@ -2,10 +2,17 @@ package com.springrest.domain.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
+
+import org.springframework.lang.NonNull;
 
 
 
@@ -21,18 +28,18 @@ public class Cliente implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-//	@NonNull
-	//@Size(max = 60)
+	@NonNull
+	@Size(max = 60)
 	private String nome;
 	
-//	@NotBlank
-//	@Email
-//	@Size(max = 255)
+	@NotBlank
+	@Email
+	@Size(max = 255)
 	private String email;
 	
-//	@NotBlank
-//	@Size(max = 20)
-//	@Columns(name = "fone")
+	@NotBlank
+	@Size(max = 20)
+	@Column(name = "fone")
 	private String fone;
 	
 	
