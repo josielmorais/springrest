@@ -1,6 +1,7 @@
 package com.springrest.api.exceptionhandler;
 
-import java.time.LocalDateTime;
+
+import java.time.OffsetDateTime;
 import java.util.List;
 
 
@@ -13,7 +14,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 public class Problema {
 
 	private Integer status;
-	private LocalDateTime dataHora;
+	private OffsetDateTime dataHora;
 	private String titulo;
 	private List<Campo> campos;
 	
@@ -58,11 +59,13 @@ public class Problema {
 		this.status = status;
 	}
 
-	public LocalDateTime getDataHora() {
+	
+
+	public OffsetDateTime getDataHora() {
 		return dataHora;
 	}
 
-	public void setDataHora(LocalDateTime dataHora) {
+	public void setDataHora(OffsetDateTime dataHora) {
 		this.dataHora = dataHora;
 	}
 
