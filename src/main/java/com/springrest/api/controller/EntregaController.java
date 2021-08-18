@@ -4,7 +4,6 @@ import java.util.List;
 
 import javax.validation.Valid;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,13 +30,9 @@ import lombok.AllArgsConstructor;
 @RequestMapping("/entregas")
 public class EntregaController {
 
-	@Autowired
 	private EntregaRepository entregaRepository;
-	@Autowired
 	private SolicitacaoEntregaService solicitacaoEntregaService;
-	@Autowired	
 	private FinalizacaoEntregaService finalizacaoEntregaService;
-	@Autowired
 	private EntregaAssembler entregaAssembler;
 	
 	@PostMapping

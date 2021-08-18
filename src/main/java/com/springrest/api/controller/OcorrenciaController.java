@@ -4,7 +4,6 @@ import java.util.List;
 
 import javax.validation.Valid;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,16 +21,16 @@ import com.springrest.domain.model.Ocorrencia;
 import com.springrest.domain.service.BuscaEntregaService;
 import com.springrest.domain.service.RegistroOcorrenciaService;
 
+import lombok.AllArgsConstructor;
 
+@AllArgsConstructor
 @RestController
 @RequestMapping("/entregas/{entregaId}/ocorrencias")
 public class OcorrenciaController {
 
-	@Autowired
+	
 	private BuscaEntregaService buscaEntregaService;
-	@Autowired
 	private RegistroOcorrenciaService registroOcorrenciaService;
-	@Autowired
 	private OcorrenciaAssembler ocorrenciaAssembler;
 	
 	@PostMapping

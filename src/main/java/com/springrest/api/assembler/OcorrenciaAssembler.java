@@ -4,17 +4,18 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.springrest.api.model.OcorrenciaModel;
 import com.springrest.domain.model.Ocorrencia;
 
+import lombok.AllArgsConstructor;
 
+@AllArgsConstructor
 @Component
 public class OcorrenciaAssembler {
 
-	@Autowired
+	
 	private ModelMapper modelMapper;
 	
 	public OcorrenciaModel toModel(Ocorrencia ocorrencia) {

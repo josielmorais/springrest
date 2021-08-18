@@ -4,7 +4,6 @@ import java.util.List;
 
 import javax.validation.Valid;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -21,14 +20,15 @@ import com.springrest.domain.model.Cliente;
 import com.springrest.domain.repository.ClienteRepository;
 import com.springrest.domain.service.CatalogoClienteService;
 
+import lombok.AllArgsConstructor;
 
+
+@AllArgsConstructor
 @RestController
 @RequestMapping("/clientes")
 public class ClienteController {
 
-	@Autowired
 	private ClienteRepository clienteRepository;
-	@Autowired
 	private CatalogoClienteService catalogoClienteService;
 
 	@GetMapping
